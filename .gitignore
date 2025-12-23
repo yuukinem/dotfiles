@@ -4,3 +4,7 @@
 fish_variables
 *.swp
 *~
+
+# Generated files (from templates)
+kitty/.config/kitty/keybindings.conf
+kitty/.config/kitty/fzf-copy.sh

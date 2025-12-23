@@ -1,0 +1,51 @@
+# Kitty keybindings configuration
+# Generated from template - DO NOT EDIT DIRECTLY
+# Edit keybindings.conf.template instead and run install.sh
+
+# Reload config
+map __MOD_SHIFT__+f5 load_config_file
+
+# New window/tab
+map __MOD__+t new_tab
+map __MOD__+n new_os_window
+map __MOD__+w close_tab
+
+# Tab switching
+map __MOD_SHIFT__+] next_tab
+map __MOD_SHIFT__+[ previous_tab
+map __MOD__+1 goto_tab 1
+map __MOD__+2 goto_tab 2
+map __MOD__+3 goto_tab 3
+map __MOD__+4 goto_tab 4
+map __MOD__+5 goto_tab 5
+
+# Font size
+map __MOD__+plus change_font_size all +1.0
+map __MOD__+minus change_font_size all -1.0
+map __MOD__+0 change_font_size all 0
+
+# Opacity
+map __MOD_CTRL__+equal set_background_opacity +0.05
+map __MOD_CTRL__+minus set_background_opacity -0.05
+map __MOD_CTRL__+0 set_background_opacity default
+
+# Copy/Paste
+map __MOD__+c copy_to_clipboard
+map __MOD__+v paste_from_clipboard
+
+# Split panes
+map __MOD__+d launch --location=vsplit
+map __MOD_SHIFT__+d launch --location=hsplit
+map __MOD_SHIFT__+w close_window
+
+# Split navigation
+map __MOD_SHIFT__+left neighboring_window left
+map __MOD_SHIFT__+right neighboring_window right
+map __MOD_SHIFT__+up neighboring_window up
+map __MOD_SHIFT__+down neighboring_window down
+
+# Search with fzf
+map __MOD__+f launch --type=overlay --stdin-source=@screen_scrollback __KITTY_CONFIG__/fzf-copy.sh
+
+# Search and copy (multi-line, strip prompt)
+map __MOD_SHIFT__+c launch --type=overlay --stdin-source=@screen_scrollback __KITTY_CONFIG__/fzf-copy.sh

@@ -1,0 +1,14 @@
+# Dotfiles dependencies for Gentoo
+# Install with: sudo emerge @dotfiles
+
+# Terminal and shell
+x11-terms/kitty
+app-shells/fish
+
+# Tools
+app-shells/fzf
+x11-misc/xclip
+dev-vcs/git
+
+# Fonts (requires guru overlay: eselect repository enable guru && emaint sync -r guru)
+# media-fonts/nerd-fonts-fira-code

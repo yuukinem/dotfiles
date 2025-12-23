@@ -4,8 +4,8 @@
 # Edit fzf-copy.sh.template instead and run install.sh
 
 # Multi-select with fzf, strip shell prompts, copy to clipboard
-/opt/homebrew/bin/fzf --multi --no-sort --no-mouse --exact -i | \
+__FZF__ --multi --no-sort --no-mouse --exact -i | \
     sed 's/^[❯›➜>$#] *//' | \
     sed 's/^.*@.*:.*[❯›➜>$#] *//' | \
     perl -pe 'chomp if eof' | \
-    /usr/bin/pbcopy
+    __COPY__
